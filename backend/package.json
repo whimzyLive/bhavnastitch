@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@bazel/bazel": "latest",
+    "@bazel/ibazel": "latest",
+    "@bazel/buildifier": "latest"
+  },
+  "scripts": {
+    "check": "./node_modules/.bin/bazel version",
+    "build": "./node_modules/.bin/bazel build //...",
+    "test": "./node_modules/.bin/bazel test //..."
+  }
+}

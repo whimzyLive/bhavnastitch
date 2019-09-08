@@ -1,0 +1,70 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "MyStaticSite": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/us-east-1",
+      "properties": {
+        "templateFile": "MyStaticSite.template.json"
+      },
+      "metadata": {
+        "/MyStaticSite/StaticSite/SiteBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucket1A888BC8",
+            "trace": [
+              "new Bucket (/home/rushi/Dev/Personal/bhavnastitch/backend/node_modules/@aws-cdk/aws-s3/lib/bucket.js:342:26)",
+              "new StaticSite (/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/resources/static-site.js:28:32)",
+              "new MyStaticSiteStack (/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:21:7)",
+              "/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:28:3",
+              "/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:3:13",
+              "Object.<anonymous> (/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:13:3)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ],
+        "/MyStaticSite/StaticSite/SiteBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StaticSiteSiteBucketPolicyD7934718",
+            "trace": [
+              "new BucketPolicy (/home/rushi/Dev/Personal/bhavnastitch/backend/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.js:21:9)",
+              "Bucket.addToResourcePolicy (/home/rushi/Dev/Personal/bhavnastitch/backend/node_modules/@aws-cdk/aws-s3/lib/bucket.js:89:27)",
+              "Function.addToPrincipalOrResource (/home/rushi/Dev/Personal/bhavnastitch/backend/node_modules/@aws-cdk/aws-iam/lib/grant.js:43:26)",
+              "Bucket.grantPublicAccess (/home/rushi/Dev/Personal/bhavnastitch/backend/node_modules/@aws-cdk/aws-s3/lib/bucket.js:217:26)",
+              "new Bucket (/home/rushi/Dev/Personal/bhavnastitch/backend/node_modules/@aws-cdk/aws-s3/lib/bucket.js:378:18)",
+              "new StaticSite (/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/resources/static-site.js:28:32)",
+              "new MyStaticSiteStack (/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:21:7)",
+              "/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:28:3",
+              "/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:3:13",
+              "Object.<anonymous> (/home/rushi/.cache/bazel/_bazel_rushi/e1b87383f25fc1fc66dbf8651fab04e2/execroot/backend/bazel-out/k8-fastbuild/bin/bh-orders-app/bootstrapper.js:13:3)",
+              "Module._compile (internal/modules/cjs/loader.js:776:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)",
+              "Module.load (internal/modules/cjs/loader.js:643:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:839:10)",
+              "internal/main/run_main_module.js:17:11"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.7.0",
+      "@aws-cdk/cx-api": "1.7.0",
+      "@aws-cdk/aws-s3": "1.7.0",
+      "@aws-cdk/aws-events": "1.7.0",
+      "@aws-cdk/aws-iam": "1.7.0",
+      "@aws-cdk/region-info": "1.7.0",
+      "@aws-cdk/aws-kms": "1.7.0",
+      "jsii-runtime": "node.js/v12.5.0"
+    }
+  }
+}

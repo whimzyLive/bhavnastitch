@@ -1,0 +1,17 @@
+
+package(default_visibility=["//visibility:public"])
+load("@npm_bazel_typescript//:index.bzl", "ts_library")
+ 
+alias(
+    name = "tsconfig.json",
+    actual = "//:tsconfig.json",
+)
+ts_library(
+    name = "src",
+    srcs = glob(["**/*.ts"]),
+    tsconfig= ":tsconfig.json",
+    deps= [
+        "@npm//@aws-cdk/aws-s3",
+        "@npm//@aws-cdk/core"
+    ]
+)

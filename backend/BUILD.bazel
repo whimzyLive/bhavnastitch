@@ -2,3 +2,4 @@
 # See https://docs.bazel.build/versions/master/build-ref.html#BUILD_files
 
 
+exports_files(["tsconfig.json"], visibility = ["//visibility:public"])

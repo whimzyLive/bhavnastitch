@@ -1,0 +1,54 @@
+{
+  "Resources": {
+    "StaticSiteSiteBucket1A888BC8": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "undefined.undefined",
+        "WebsiteConfiguration": {
+          "ErrorDocument": "error.html",
+          "IndexDocument": "index.html"
+        }
+      },
+      "UpdateReplacePolicy": "Delete",
+      "DeletionPolicy": "Delete",
+      "Metadata": {
+        "aws:cdk:path": "MyStaticSite/StaticSite/SiteBucket/Resource"
+      }
+    },
+    "StaticSiteSiteBucketPolicyD7934718": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "StaticSiteSiteBucket1A888BC8"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": "*",
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "StaticSiteSiteBucket1A888BC8",
+                        "Arn"
+                      ]
+                    },
+                    "/*"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "MyStaticSite/StaticSite/SiteBucket/Policy/Resource"
+      }
+    }
+  }
+}

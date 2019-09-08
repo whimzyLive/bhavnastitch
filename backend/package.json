@@ -3,13 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.7.0",
+    "@aws-cdk/aws-s3": "^1.7.0",
+    "@aws-cdk/core": "^1.7.0",
     "@bazel/bazel": "latest",
+    "@bazel/buildifier": "latest",
     "@bazel/ibazel": "latest",
-    "@bazel/buildifier": "latest"
+    "@bazel/typescript": "^0.37.0",
+    "typescript": "^3.6.2"
   },
   "scripts": {
     "check": "./node_modules/.bin/bazel version",
     "build": "./node_modules/.bin/bazel build //...",
-    "test": "./node_modules/.bin/bazel test //..."
-  }
+    "synth": "cdk",
+    "test": "./node_modules/.bin/bazel test //...",
+    "clean": "./node_modules/.bin/bazel clean --expunge"
+  },
+  "dependencies": {}
 }

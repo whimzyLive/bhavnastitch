@@ -2,11 +2,13 @@
   "compilerOptions": {
     "strict": true,
     "moduleResolution": "node",
+    "module": "commonjs",
     "lib": ["es2015.promise", "es5", "es6", "es2017.object", "dom"],
     "noImplicitAny": false,
     "experimentalDecorators": true,
     "strictNullChecks": false,
     "baseUrl": ".",
+    "types": ["node"],
     "paths": {
       "@bhavnastitch/*": ["./*"],
       "@bh-orders-app/*": ["./bh-orders-app/*"]

@@ -4,15 +4,17 @@ load("@npm_bazel_typescript//:index.bzl", "ts_library")
 load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
 
 alias(
-    name = "tsconfig.json",
+    name = "config",
     actual = "//:tsconfig.json",
 )
 
 ts_library(
     name = "src",
     srcs = glob(["**/*.ts"]),
-    tsconfig = ":tsconfig.json",
+    tsconfig = ":config",
     deps = [
+      "@npm//@types/node",
+      "@npm//moment"
     ],
 )
 
@@ -22,6 +24,7 @@ rollup_bundle(
     entry_point = ":index.ts",
     global_name = "exports",
     globals = {
+      'moment':'require("moment")'
     },
     deps = [
         ":src",

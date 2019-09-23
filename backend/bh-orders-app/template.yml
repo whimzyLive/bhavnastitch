@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Contains Bhavnastitch orders app
+
+Globals:
+  Function:
+    Timeout: 180
+    Runtime: nodejs10.x
+Resources:
+  PutItems:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: bundle.putItems
+      CodeUri: ./src
+      Layers:
+        - arn:aws:lambda:ap-southeast-2:611775291341:layer:test-Layer-1:2
+      Events:
+        PutItems:
+          Type: Api
+          Properties:
+            Path: /order
+            Method: post

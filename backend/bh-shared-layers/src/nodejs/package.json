@@ -1,0 +1,11 @@
+{
+  "name": "lambda-shared-layer",
+  "version": "1.0.0",
+  "description": "Shared Dependencies Layer",
+  "main": "index.js",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "author": "Rushi Patel <rpatel@nextfaze.com>",
+  "license": "ISC"
+}

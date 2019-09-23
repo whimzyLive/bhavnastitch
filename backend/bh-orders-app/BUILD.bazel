@@ -1,6 +1,8 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@npm_bazel_typescript//:index.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:defs.bzl", "rollup_bundle")
+
 
 alias(
     name = "tsconfig.json",
@@ -15,4 +17,18 @@ ts_library(
         "@npm//@aws-cdk/aws-s3",
         "@npm//@aws-cdk/core",
     ],
+)
+
+rollup_bundle(
+    name = "inner_bundle",
+    entry_point = ":bootstrapper.ts",
+    global_name = "exports",
+    deps = [
+        ":src"
+    ],
+    enable_code_splitting = False,
+    globals = {
+        "@aws-cdk/aws-s3":"require('@aws-cdk/aws-s3')",
+        "@aws-cdk/core":"require('@aws-cdk/core')"
+    }
 )

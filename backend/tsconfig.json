@@ -10,7 +10,7 @@
     "baseUrl": ".",
     "types": ["node"],
     "paths": {
-      "@bhavnastitch/*": ["./*"],
+      "backend/*": ["*"],
       "@bh-orders-app/*": ["./bh-orders-app/*"]
     }
   },

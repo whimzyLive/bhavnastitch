@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Shared Service Layer
+
+Resources:
+  SharedDependenciesLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: test-service-Layer-1
+      CompatibleRuntimes:
+        - nodejs6.10
+        - nodejs8.10
+      ContentUri: ./src

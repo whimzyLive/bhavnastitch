@@ -26,7 +26,7 @@ rollup_bundle(
     global_name = "exports",
     globals = {
       'moment':'require("moment")',
-      'backend/bh-shared-services/src':'require("/opt/nodejs/bh-shared-services")'
+      'backend/bh-shared-services/src/index':'require("bh-shared-services")'
     },
     deps = [
         ":src",

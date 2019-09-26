@@ -10,10 +10,11 @@ Resources:
   PutItems:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: bundle.putItems
+      Handler: bundle.putItem
       CodeUri: ./src
       Layers:
         - arn:aws:lambda:ap-southeast-2:611775291341:layer:test-Layer-1:2
+        - arn:aws:lambda:ap-southeast-2:611775291341:layer:test-service-Layer-1:4
       Events:
         PutItems:
           Type: Api

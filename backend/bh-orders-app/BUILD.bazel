@@ -3,7 +3,7 @@ load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 genrule(
     name = "bundle",
     srcs = [
-        "//bh-orders-app/src:bundle.es2015.js",
+        "//bh-orders-app/src:bundle.js",
     ],
     outs = ["bundle.js"],
     cmd = "cp $< $@",
@@ -15,7 +15,7 @@ pkg_tar(
         ":bundle"
     ],
     extension = "tar.gz",
-    package_dir = "src/nodejs",
+    package_dir = "src",
 )
 
 pkg_tar(

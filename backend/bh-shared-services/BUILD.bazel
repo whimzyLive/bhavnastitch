@@ -1,9 +1,9 @@
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 
 genrule(
-    name = "bundle",
+    name = "bh-shared-services",
     srcs = [
-        "//bh-shared-services/src:bundle.es2015.js",
+        "//bh-shared-services/src:bundle.js",
     ],
     outs = ["bundle.js"],
     cmd = "cp $< $@",
@@ -15,7 +15,7 @@ pkg_tar(
         ":bundle"
     ],
     extension = "tar.gz",
-    package_dir = "src",
+    package_dir = "src/nodejs/node_modules",
 )
 
 pkg_tar(
@@ -26,6 +26,7 @@ pkg_tar(
     extension = "tar.gz",
     deps = [
         ":src",
+        ":src2"
     ],
 )
 

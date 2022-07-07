@@ -24,6 +24,6 @@
     "bazel:lint-fix": "npm run bazel:format --lint=fix"
   },
   "dependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.29.4"
   }
 }

@@ -9,7 +9,7 @@
     "@bazel/bazel": "latest",
     "@bazel/buildifier": "^0.28.0",
     "@bazel/ibazel": "latest",
-    "@bazel/typescript": "^0.37.0",
+    "@bazel/typescript": "^5.8.1",
     "@types/node": "^12.7.5",
     "typescript": "^3.6.2"
   },
